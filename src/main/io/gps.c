@@ -1373,7 +1373,7 @@ void gpsUpdate(timeUs_t currentTimeUs)
             sensorsSet(SENSOR_GPS);
 
             GPS_update ^= GPS_DIRECT_TICK;
-
+            calculateNavInterval();
             onGpsNewData();
 
             GPS_update &= ~GPS_MSP_UPDATE;
